@@ -370,6 +370,8 @@ body {
 }
 
 .dark .contact .icon {
+  -webkit-box-shadow: 0 0.2px 5px 0.5px #4b586693;
+          box-shadow: 0 0.2px 5px 0.5px #4b586693;
   margin: 10px;
   height: 140px;
   background-color: #021220;
@@ -404,6 +406,11 @@ body {
       flex-wrap: wrap;
 }
 
+.dark .contact .icon-container a {
+  color: #6f8296;
+  text-decoration: none;
+}
+
 @media screen and (max-width: 500px) {
   .dark .contact .icon-container {
     padding: 10px;
@@ -411,10 +418,113 @@ body {
   }
 }
 
+.dark .project-search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 20px;
+}
+
+.dark .project-search-field input {
+  outline: none;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #6f8296;
+  font-size: 16px;
+  color: #6f8296;
+  padding: 5px;
+}
+
+.dark .project-search-field input::-webkit-input-placeholder {
+  color: #6f8296;
+}
+
+.dark .project-search-field input:-ms-input-placeholder {
+  color: #6f8296;
+}
+
+.dark .project-search-field input::-ms-input-placeholder {
+  color: #6f8296;
+}
+
+.dark .project-search-field input::placeholder {
+  color: #6f8296;
+}
+
+.dark .project-search-btn {
+  cursor: pointer;
+  border: 1px solid #6f8296;
+  padding: 5px;
+  margin-left: 5px;
+  border-radius: 5px;
+}
+
 .dark .project .heading {
   font-size: 24px;
   font-family: "Langar", cursive;
   margin: 20px;
+}
+
+.dark .project-card {
+  margin: 20px;
+  background-color: #021220;
+  width: 300px;
+  -webkit-box-shadow: 0 0.2px 5px 0.5px #4b586693;
+          box-shadow: 0 0.2px 5px 0.5px #4b586693;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.dark .project-card-image {
+  width: 300px;
+  height: 180px;
+  overflow: hidden;
+}
+
+.dark .project-card-image img {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.dark .project-card-details .title {
+  font-family: "Langar", cursive;
+  font-size: 18px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dark .project-card-details .tags {
+  font-family: "Langar", cursive;
+  font-size: 14px;
+}
+
+.dark .project-card-container {
+  margin: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.dark .project-card-container a {
+  color: #6f8296;
+  text-decoration: none;
 }
 
 ::-webkit-scrollbar {
@@ -788,6 +898,8 @@ body {
 }
 
 .light .contact .icon {
+  -webkit-box-shadow: 0 0.2px 5px 0.5px #4b586693;
+          box-shadow: 0 0.2px 5px 0.5px #4b586693;
   margin: 10px;
   height: 140px;
   background-color: #ffffff;
@@ -822,6 +934,11 @@ body {
       flex-wrap: wrap;
 }
 
+.light .contact .icon-container a {
+  color: #4b5866;
+  text-decoration: none;
+}
+
 @media screen and (max-width: 500px) {
   .light .contact .icon-container {
     padding: 10px;
@@ -829,9 +946,112 @@ body {
   }
 }
 
+.light .project-search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 20px;
+}
+
+.light .project-search-field input {
+  outline: none;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #4b5866;
+  font-size: 16px;
+  color: #4b5866;
+  padding: 5px;
+}
+
+.light .project-search-field input::-webkit-input-placeholder {
+  color: #4b5866;
+}
+
+.light .project-search-field input:-ms-input-placeholder {
+  color: #4b5866;
+}
+
+.light .project-search-field input::-ms-input-placeholder {
+  color: #4b5866;
+}
+
+.light .project-search-field input::placeholder {
+  color: #4b5866;
+}
+
+.light .project-search-btn {
+  cursor: pointer;
+  border: 1px solid #4b5866;
+  padding: 5px;
+  margin-left: 5px;
+  border-radius: 5px;
+}
+
 .light .project .heading {
   font-size: 24px;
   font-family: "Langar", cursive;
   margin: 20px;
+}
+
+.light .project-card {
+  margin: 20px;
+  background-color: #ffffff;
+  width: 300px;
+  -webkit-box-shadow: 0 0.2px 5px 0.5px #4b586693;
+          box-shadow: 0 0.2px 5px 0.5px #4b586693;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.light .project-card-image {
+  width: 300px;
+  height: 180px;
+  overflow: hidden;
+}
+
+.light .project-card-image img {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.light .project-card-details .title {
+  font-family: "Langar", cursive;
+  font-size: 18px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.light .project-card-details .tags {
+  font-family: "Langar", cursive;
+  font-size: 14px;
+}
+
+.light .project-card-container {
+  margin: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.light .project-card-container a {
+  color: #4b5866;
+  text-decoration: none;
 }
 /*# sourceMappingURL=main.css.map */
