@@ -7,21 +7,14 @@ const About = () => {
         <div className="about-heading">About</div>
         <div className="description">
           I am Ashwary Jharbade, an enthusiast quick learner and aspiring
-          Software Engineer at CESIT Ltd. Chennai. I am from Bhopal and have
-          completed my studies in Computer Science Engineering from Lakshimi
-          Narain College of Technology (LNCT) Bhopal, Madhya Pradesh, India.
+          Software Engineer. I have {exp} {exp > 1 ? "years" : "year"} of work
+          experience in IT industry. I am proactive and result oriented
+          professional having complete knowledge and skills of Software
+          Development Life Cycle &amp; Methodologies.
         </div>
         <div className="description">
-          I am proactive and result oriented professional have {exp}{" "}
-          {exp > 1 ? "years" : "year"} of work experience in IT industry. I have
-          gained knowledge and skills of complete Software Development Life
-          Cycle from requirement analysis to mockup implementation, testting and
-          deployment.
-        </div>
-        <div className="description">
-          I am focused and inquisitive and have interest in learning
-          cosmological facts and theories. My hobbies are watching movies,
-          playing cricket and listening music.
+          I have interest in learning cosmological facts and theories &amp; my
+          hobbies are watching movies, playing cricket and listening music.
         </div>
         <div className="about-heading">Professional Highlights</div>
         <div className="description">
@@ -196,6 +189,12 @@ const About = () => {
           <div className="description-content">
             <div className="heading">Nationality:</div>
             <div className="text">Indian</div>
+          </div>
+          <div className="description-content">
+            <div className="heading">Education:</div>
+            <div className="text">
+              B-Tech. Computer Science &amp; Engineering
+            </div>
           </div>
           <div className="description-content">
             <div className="heading">Languages:</div>
