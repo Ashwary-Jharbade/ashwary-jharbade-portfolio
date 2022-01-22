@@ -1,8 +1,18 @@
 import { useRef, useState } from "react";
+import ProjectCard from "../ProjectCard";
 
 const Projects = () => {
   const inpRef = useRef(null);
   const [search, setSearch] = useState("");
+  const gitData = {
+    id: 1,
+    imageAlt: "Hybrid signin page gif",
+    imageUrl:
+      "https://user-images.githubusercontent.com/55127977/144719202-1072313f-1a64-421d-9a9f-d3117ea61a3c.png",
+    gitUrl: "https://github.com/Ashwary-Jharbade?tab=repositories",
+    title: "Explore these Repositories for more",
+    tags: "HTML, JS, CSS, C, C++, Python",
+  };
   const data = [
     {
       id: 1,
@@ -94,6 +104,15 @@ const Projects = () => {
       title: "Disney+ hotstar home page clone",
       tags: "HTML, JS, CSS",
     },
+    {
+      id: 11,
+      imageAlt: "Codesharingan clone",
+      imageUrl:
+        "https://user-images.githubusercontent.com/55127977/144720630-78ad49d3-163a-4361-b3b1-8ef5dd25939c.gif",
+      gitUrl: "https://github.com/Ashwary-Jharbade/codesharingan",
+      title: "Codesharingan",
+      tags: "React JS, HTML, CSS",
+    },
   ];
 
   const _onSearchHandler = (e) => {
@@ -107,36 +126,61 @@ const Projects = () => {
 
   const _projectDataIteratorHandler = () => {
     const searchValue = search.toUpperCase();
-    return data
+    const projectData = data
       .filter((val) => {
         return val.title.toUpperCase().indexOf(searchValue) > -1;
       })
-      .map((item, index) => {
+      .map((item) => {
+        const { id, gitUrl, imageAlt, imageUrl, title, tags } = item;
         return (
           <>
-            <a key={index} href={item.gitUrl} target="_blank">
-              <div className="project-card">
-                <div className="project-card-image">
-                  <img src={item.imageUrl} alt={item.imageAlt} />
-                </div>
-                <div className="project-card-details">
-                  <div className="title">{item.title}</div>
-                  <div className="tags">{item.tags}</div>
-                </div>
-              </div>
-            </a>
+            <ProjectCard
+              key={id}
+              gitUrl={gitUrl}
+              imageAlt={imageAlt}
+              imageUrl={imageUrl}
+              title={title}
+              tags={tags}
+            ></ProjectCard>
           </>
         );
       });
+    if (projectData.length === 0) {
+      const { id, gitUrl, imageAlt, imageUrl, title, tags } = gitData;
+      return (
+        <ProjectCard
+          key={id}
+          gitUrl={gitUrl}
+          imageAlt={imageAlt}
+          imageUrl={imageUrl}
+          title={title}
+          tags={tags}
+        ></ProjectCard>
+      );
+    }
+    return projectData;
   };
 
+  const _onInputHitEnterHandler = (e) => {
+    if (!e || !e.key || e.key !== "Enter") {
+      return;
+    }
+    _onSearchHandler(e);
+  };
+
+  console.log("render");
   return (
     <>
       <div className="project">
         <div className="heading">Projects</div>
         <div className="project-search">
           <div className="project-search-field">
-            <input ref={inpRef} type="text" placeholder="Search" />
+            <input
+              ref={inpRef}
+              onKeyUp={_onInputHitEnterHandler}
+              type="text"
+              placeholder="Search"
+            />
           </div>
           <div className="project-search-btn" onClick={_onSearchHandler}>
             <span className="fa fa-search"></span>
